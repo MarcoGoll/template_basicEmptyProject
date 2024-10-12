@@ -64,7 +64,7 @@ h6 {
         :ROOT - BASICS
     ============================================================ */
     /*Basics - for Container*/
-    --stdMargin: 1rem;
+    --stdMargin: 64px;
     --stdPadding: 1rem;
     --stdRadius: 0.5rem;
     --stdGap: 1.5rem;
@@ -343,6 +343,8 @@ input {
     width: 100%;
     min-width: 320px;
     max-width: 1440px;
+    margin-left: var(--stdMargin);
+    margin-right: var(--stdMargin);
 }
 
 /*BASIC FLEXBOX KLASSEN Row Center Column Center */
