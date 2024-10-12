@@ -300,12 +300,27 @@ h4 {
     font-size: var(--fsDesktopH4);
 }
 
+nav a {
+    text-decoration: none;
+    padding: var(--stdPaddingInteractiveElements);
+    border-radius: var(--stdRadiusInteractiveElements);
+    color: var(--clrTextBright);
+}
+
+nav a:hover {
+    background-color: var(--clrPrim35);
+}
+
 a {
     text-decoration: none;
     padding: var(--stdPaddingInteractiveElements);
+    border-radius: var(--stdRadiusInteractiveElements);
+    color: var(--clrTextBright);
 }
 
-a:hover {}
+a:hover {
+    /*change at least background-color*/
+}
 
 button {
     border-radius: var(--stdPaddingInteractiveElements);
