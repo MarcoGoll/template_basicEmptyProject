@@ -308,8 +308,10 @@ nav a {
 }
 
 nav a:hover {
-    background-color: var(--clrPrim35);
+    background-color: var(--clrPrim80);
+    color: var(--clrPrim20);
 }
+
 
 a {
     text-decoration: none;
