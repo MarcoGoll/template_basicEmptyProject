@@ -329,7 +329,7 @@ input {
 /*============================================================ 
     GLOBAL ==> USEFUL CLASSES
 ============================================================ */
-.contentContainer {
+.contentLimit {
     width: 100%;
     min-width: 320px;
     max-width: 1440px;
@@ -343,7 +343,7 @@ input {
     justify-content: center;
 }
 
-.flexROW_xCenter_yCenter {
+.flexROW__xCyC {
     display: flex;
     justify-content: center;
     align-items: center;
