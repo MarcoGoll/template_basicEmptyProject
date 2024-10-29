@@ -4,7 +4,15 @@
 /*================================================
     for BASIC FEATURE ==> go To Top
 /*================================================*/
-let goTopBtn = document.getElementById("myBtn");
+const refGoTopBtn = document.getElementById("goTopBtn");
+
+
+/*================================================
+    for BASIC FEATURE ==> toogle dark mode
+/*================================================*/
+const refBody = document.getElementById('body');
+const refbtnDarkmode = document.getElementById('btnDarkmode');
+
 
 /*====================================================================================================
     FUNCTIONS
@@ -23,9 +31,9 @@ window.onscroll = function () { scrollFunction() };
 */
 function scrollFunction() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        goTopBtn.style.display = "block";
+        refGoTopBtn.style.display = "block";
     } else {
-        goTopBtn.style.display = "none";
+        refGoTopBtn.style.display = "none";
     }
 }
 
@@ -40,6 +48,21 @@ function topFunction() {
 /*================================================
     for BASIC FEATURE ==> toogle dark mode
 /*================================================*/
+/*
+* Switch zwischen Darkmode and Lightmode
+*/
+function switchDarkmode() {
+    if (refBody.classList.contains("darkmode")) {
+        //add here properties for lightmode
+        refBody.classList.remove("darkmode");
+        refbtnDarkmode.innerHTML = "<img src='./img/googleFontsIcons/moon.svg' alt='Moon'>";
+
+    } else {
+        //add here properties for darkmodemode
+        refBody.classList.add("darkmode");
+        refbtnDarkmode.innerHTML = "<img src='./img/googleFontsIcons/sun.svg' alt='Sun'>";
+    }
+}
 
 
 

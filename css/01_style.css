@@ -339,6 +339,11 @@ textarea {
     display: none;
 }
 
+.darkmode {
+    color: var(--clrTextDefaultInDarkMode);
+    background-color: var(--clrBGDefaultInDarkMode);
+}
+
 /*BASIC FLEXBOX KLASSEN ==> x=xAchse / y=yAchse / C = Center */
 .flexROW_xC {
     display: flex;
