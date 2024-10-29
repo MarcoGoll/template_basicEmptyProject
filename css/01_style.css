@@ -6,6 +6,8 @@
 *::before,
 *::after {
     box-sizing: border-box;
+    /* outline: 2px solid lime; <== to identify all sizes*/
+    /* background: hsl(0 100% 50% / 0.1 <== to identify Layering*/
 }
 
 /* Remove default margin & padding*/
@@ -53,8 +55,6 @@ h6 {
 ==================================================================================================== */
 
 
-
-
 /*==================================================================================================== 
     START ==> :ROOT
 ==================================================================================================== */
@@ -64,13 +64,13 @@ h6 {
         :ROOT - BASICS
     ============================================================ */
     /*Basics - for Container*/
-    --stdMargin: 64px;
+    --stdMargin: 4rem;
     --stdPadding: 1rem;
     --stdRadius: 0.5rem;
     --stdGap: 1.5rem;
 
     /*Basics for InteractiveElements (Link / Button / Input) */
-    --stdPaddingInteractiveElements: 0.8rem;
+    --stdPaddingInteractiveElements: 0.5rem 2rem;
     --stdRadiusInteractiveElements: 0.5rem;
 
 
@@ -128,40 +128,40 @@ h6 {
     /*============================================================ 
         :ROOT - COLOURS
     ============================================================ */
-    /*Text AND Background's*/
+    /*Text AND Background's (BG)*/
 
     /*LightMode (Default)*/
     /*Default Text and Background InLightMode*/
     --clrTextDefaultInLightMode: black;
-    --clrBackgroundDefaultInLightMode: white;
+    --clrBGDefaultInLightMode: white;
     /*Text interactive Elements in LightMode*/
     --clrTextLinkInLightMode: black;
     --clrTextBtnInLightMode: black;
     --clrTextCtaInLightMode: black;
     /*Background interactive Elements in LightMode*/
-    --clrBackgroundLinkInLightMode: grey;
-    --clrBackgroundBtnInLightMode: grey;
-    --clrBackgroundCtaInLightMode: grey;
-    --clrBackgroundLinkHoverInLightMode: lightgrey;
-    --clrBackgroundBtnHoverInLightMode: lightgrey;
-    --clrBackgroundCtaHoverInLightMode: lightgrey;
+    --clrBGLinkInLightMode: rgb(55, 0, 255);
+    --clrBGBtnInLightMode: rgb(55, 0, 255);
+    --clrBGCtaInLightMode: rgb(0, 255, 98);
+    --clrBGLinkHoverInLightMode: rgb(105, 63, 255);
+    --clrBGBtnHoverInLightMode: rgb(105, 63, 255);
+    --clrBGCtaHoverInLightMode: rgb(76, 255, 145);
     /*TODO:--clrContainerBackgroundInLightMode: <transparen>;*/
 
     /*DarkMode*/
     /*Default Text and Background InDarkMode*/
     --clrTextDefaultInDarkMode: white;
-    --clrBackgroundDefaultInDarkMode: black;
+    --clrBGDefaultInDarkMode: black;
     /*Text interactive Elements in LightMode*/
     --clrTextLinkInDarkMode: white;
     --clrTextBtnInDarkMode: white;
     --clrTextCtaInDarkMode: white;
     /*Background interactive Elements in LightMode*/
-    --clrBackgroundLinkInDarkMode: grey;
-    --clrBackgroundBtnInDarkMode: grey;
-    --clrBackgroundCtaInDarkMode: grey;
-    --clrBackgroundLinkHoverInDarkMode: lightgrey;
-    --clrBackgroundBtnHoverInDarkMode: lightgrey;
-    --clrBackgroundCtaHoverInDarkMode: lightgrey;
+    --clrBGLinkInDarkMode: grey;
+    --clrBGBtnInDarkMode: grey;
+    --clrBGCtaInDarkMode: grey;
+    --clrBGLinkHoverInDarkMode: lightgrey;
+    --clrBGBtnHoverInDarkMode: lightgrey;
+    --clrBGCtaHoverInDarkMode: lightgrey;
     /*TODO:--clrContainerBackgroundInLightMode: <transparen>;*/
 
     /*Primary Color*/
@@ -233,9 +233,6 @@ h6 {
 ==================================================================================================== */
 
 
-
-
-
 /*==================================================================================================== 
     START ==> GLOBAL
 ==================================================================================================== */
@@ -274,57 +271,60 @@ h4 {
     font-size: var(--fsDesktopH4);
 }
 
+a {
+    display: inline-block;
+    text-decoration: none;
+    padding: var(--stdPaddingInteractiveElements);
+    border-radius: var(--stdRadiusInteractiveElements);
+    color: var(--clrTextLinkInLightMode);
+    background-color: var(--clrBGLinkInLightMode);
+}
+
+a:hover {
+    background-color: var(--clrBGLinkHoverInLightMode);
+}
+
 nav a {
     text-decoration: none;
     padding: var(--stdPaddingInteractiveElements);
     border-radius: var(--stdRadiusInteractiveElements);
     color: var(--clrTextLinkInLightMode);
-    background-color: var(--clrBackgroundLinkInLightMode);
+    background-color: var(--clrBGLinkInLightMode);
 }
 
 nav a:hover {
-    background-color: var(--clrBackgroundLinkHoverInLightMode);
-}
-
-
-a {
-    text-decoration: none;
-    padding: var(--stdPaddingInteractiveElements);
-    border-radius: var(--stdRadiusInteractiveElements);
-    color: var(--clrTextLinkInLightMode);
-    background-color: var(--clrBackgroundLinkInLightMode);
-}
-
-a:hover {
-    background-color: var(--clrBackgroundLinkHoverInLightMode);
+    background-color: var(--clrBGLinkHoverInLightMode);
 }
 
 button {
+    display: inline-block;
     padding: var(--stdPaddingInteractiveElements);
     border-radius: var(--stdRadiusInteractiveElements);
     color: var(--clrTextBtnInLightMode);
-    background-color: var(--clrBackgroundBtnInLightMode);
+    background-color: var(--clrBGBtnInLightMode);
 }
 
 button:hover {
-    background-color: var(--clrBackgroundBtnHoverInLightMode);
+    background-color: var(--clrBGBtnHoverInLightMode);
 }
 
 .cta {
     padding: var(--stdPaddingInteractiveElements);
     border-radius: var(--stdRadiusInteractiveElements);
     color: var(--clrTextCtaInLightMode);
-    background-color: var(--clrBackgroundCtaInLightMode);
+    background-color: var(--clrBGCtaInLightMode);
 }
 
 .cta:hover {
-    background-color: var(--clrBackgroundCtaHoverInLightMode);
+    background-color: var(--clrBGCtaHoverInLightMode);
 }
 
-input {
+input,
+textarea {
     font-size: var(--fsDesktopDefault);
     padding: var(--stdPaddingInteractiveElements);
 }
+
 
 /*============================================================ 
     GLOBAL ==> USEFUL CLASSES
@@ -333,12 +333,14 @@ input {
     width: 100%;
     min-width: 320px;
     max-width: 1440px;
-    margin-left: var(--stdMargin);
-    margin-right: var(--stdMargin);
 }
 
-/*BASIC FLEXBOX KLASSEN Row Center Column Center */
-.flexROW_xCenter {
+.d_none {
+    display: none;
+}
+
+/*BASIC FLEXBOX KLASSEN ==> x=xAchse / y=yAchse / C = Center */
+.flexROW_xC {
     display: flex;
     justify-content: center;
 }
@@ -349,13 +351,13 @@ input {
     align-items: center;
 }
 
-.flexCOLUMN_xCenter {
+.flexCOLUMN_xC {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.flexCOLUMN_xCenter_yCenter {
+.flexCOLUMN_xCyC {
     display: flex;
     flex-direction: column;
     align-items: center;
