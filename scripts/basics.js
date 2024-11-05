@@ -55,12 +55,12 @@ function switchDarkmode() {
     if (refBody.classList.contains("darkmode")) {
         //add here properties for lightmode
         refBody.classList.remove("darkmode");
-        refbtnDarkmode.innerHTML = "<img src='./img/googleFontsIcons/moon.svg' alt='Moon'>";
+        refbtnDarkmode.innerHTML = "<img src='./assets/icons/googleFontsIcons/moon.svg' alt='Moon'>";
 
     } else {
         //add here properties for darkmodemode
         refBody.classList.add("darkmode");
-        refbtnDarkmode.innerHTML = "<img src='./img/googleFontsIcons/sun.svg' alt='Sun'>";
+        refbtnDarkmode.innerHTML = "<img src='./assets/icons/googleFontsIcons/sun.svg' alt='Sun'>";
     }
 }
 
